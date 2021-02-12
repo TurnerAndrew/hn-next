@@ -12,7 +12,7 @@ const index = ({stories}) => {
 
 export default index
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const stories = await getStories()
 
   return {
