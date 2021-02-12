@@ -19,6 +19,6 @@ export async function getComment(id) {
     return comment
 }
 
-export async function getComments() {
-    const 
-}
+// export async function getComments() {
+//     const 
+// }

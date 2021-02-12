@@ -8,12 +8,12 @@ const Story = ({story}) => {
     return (
         <div>
             <span>
-            <a href={`${story.url}`}>
+            <a href={`${story.url}`} target='_blank'>
                 <h5><span>{story.title}</span></h5>
             </a>
             </span>
             <span>
-            <p>{story.score} points by {story.by} | {moment(time).fromNow()} | hide | <Link to={`./comments`}> {story.descendants} comments</Link></p>
+            <p>{story.score} points by {story.by} | {moment(time).fromNow()} | hide | {story.descendants} comments</p>
             </span>
             
         </div>
