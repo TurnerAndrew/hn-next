@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "context": "^1.1.0",
     "isomorphic-fetch": "^3.0.0",
     "moment": "^2.29.1",
     "next": "10.0.6",

@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import {useEffect} from 'react'
 import moment from 'moment'
 
 const Story = ({story, number}) => {
@@ -14,7 +13,10 @@ const Story = ({story, number}) => {
                 </a>
             </span>
             <span>
-            <p>{story.score} points by {story.by} | {moment(time).fromNow()} | hide | {story.descendants} comments</p>
+                <p>{story.score} points by {story.by} | {moment(time).fromNow()} | hide | <Link href='/comments/[id]' as={`/comments/${story.id}`}>
+                         <a>{story.descendants} comments</a>
+                    </Link>
+                </p>
             </span>
             
         </div>

@@ -14,11 +14,19 @@ export async function getStories() {
     return Promise.all(stories)
 }
 
-export async function getComment(id) {
-    const comment = await fetch (`https://hacker-news.firebaseio.com/v0/item/${id}.json`).then(res => res.json())
-    return comment
+export async function getCommentIds(id) {
+    const commentIds = await fetch (`https://hacker-news.firebaseio.com/v0/item/${id}.json`).then(res => res.json())
+    const ids = commentIds.kids.map(id => id)
+    return ids
+    
 }
 
-// export async function getComments() {
-//     const 
-// }
+export async function getComment(id) {
+    const comments = await fetch (`https://hacker-news.firebaseio.com/v0/item/${id}.json`).then(res => res.json())
+    return comments
+}
+
+export async function getComments(commentIds) {
+    const comments = await commentIds.kids.map(async (commentId) => await getComment(commentId))
+    return Promise.all(comments)
+}
