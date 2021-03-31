@@ -13,7 +13,7 @@ const comments = ({commentIds}) => {
 export default comments
 
 export const getServerSideProps = async (context) => {
-    const commentIds = await getCommentIds(26244093)
+    const commentIds = await getCommentIds()
 
     return { 
         props: {
