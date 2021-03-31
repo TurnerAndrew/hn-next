@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Comments = ({commentIds}, {comments}) => {
+const Comments = (articleId) => {
     return (
         <div>
-            <h1>This is the comments page.</h1>
+            <h1>{`This is the comments page for article ${articleId} `}</h1>
             
         </div>
     )
