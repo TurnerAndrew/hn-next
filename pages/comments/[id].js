@@ -5,7 +5,7 @@ import { getCommentIds } from '../../functions/stories'
 
 const comments = () => {
    const router = useRouter()
-   const {articleId} = router.query
+   const articleId = router.query.id
 
     return (
         <div>
@@ -16,13 +16,3 @@ const comments = () => {
 }
 
 export default comments
-
-// export const getServerSideProps = async (context) => {
-//     const commentIds = await getCommentIds()
-
-//     return { 
-//         props: {
-//             commentIds
-//         }
-//     }
-// }
