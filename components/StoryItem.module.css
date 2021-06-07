@@ -1,0 +1,23 @@
+.story {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: .5em;
+}
+
+.title {
+    display: flex;
+    font-size: large;
+    height: 1.75em;
+}
+
+.stats {
+    display: flex;
+    font-size: small;
+    height: 1.5em;
+    margin-left: 1.75em;
+}
+
+.link {
+    margin-left: .5em;
+}

@@ -1,3 +1,5 @@
+import axios from "axios"
+
 export async function getStoryIds() {
     const storyIds = await fetch ('https://hacker-news.firebaseio.com/v0/topstories.json').then(res => res.json())
     return storyIds.slice(0, 30)    

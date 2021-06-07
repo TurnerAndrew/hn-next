@@ -1,10 +1,11 @@
 import Link from 'next/link'
+import styles from './Header.module.css'
 
 const Header = () => {
     return (
-        <nav>
-            <span>
-                <Link href='/'>
+        <header className={styles.header}>
+            <nav className={styles.nav}>
+                <Link className={styles.title} href='/'>
                     <a>Hacker News</a>
                 </Link> | &nbsp;
                 <Link href='/newstories'>
@@ -25,8 +26,8 @@ const Header = () => {
                 <Link href='/jobs'>
                     <a>jobs</a>
                 </Link>
-            </span>
-        </nav>
+            </nav>
+        </header>
         
     )
 }

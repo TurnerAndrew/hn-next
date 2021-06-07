@@ -1,19 +1,21 @@
 import Link from 'next/link'
 import moment from 'moment'
+import styles from './StoryItem.module.css'
 
 const Story = ({story, number}) => {
     const time = moment.unix(story.time)
 
     return (
-        <div>
-            <span>
-                <h5>{number} . </h5>
-                <a href={`${story.url}`} target='_blank'>
-                    <h5>{story.title}</h5>
+        <div className={styles.story}>
+            <span className={styles.title}>
+                <p>{number}. </p>
+                <a href={`${story.url}`} target='_blank' className={styles.link}>
+                    <p>{story.title}</p>
                 </a>
             </span>
-            <span>
-                <p>{story.score} points by {story.by} | {moment(time).fromNow()} | hide | <Link href='/comments/[id]' as={`/comments/${story.id}`}>
+            <span className={styles.stats}>
+                <p>
+                    {story.score} points by {story.by} | {moment(time).fromNow()} | hide | <Link href='/comments/[id]' as={`/comments/${story.id}`}>
                          <a>{story.descendants} comments</a>
                     </Link>
                 </p>
