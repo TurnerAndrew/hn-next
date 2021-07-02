@@ -1,20 +1,19 @@
 .story {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     margin-left: .5em;
 }
 
 .title {
     display: flex;
     font-size: large;
-    height: 1.75em;
 }
 
 .stats {
     display: flex;
     font-size: small;
-    height: 1.5em;
+    /* height: 1.5em; */
     margin-left: 1.75em;
 }
 
