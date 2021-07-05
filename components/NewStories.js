@@ -10,4 +10,4 @@ const TopStories = ({stories}) => {
     )
 }
 
-export default TopStories
+export default NewStories

@@ -13,7 +13,7 @@ const Header = () => {
           <a>new</a>
         </Link>{" "}
         | &nbsp;
-        <Link href='/aast'>
+        <Link href='/past'>
           <a>past</a>
         </Link>{" "}
         | &nbsp;
